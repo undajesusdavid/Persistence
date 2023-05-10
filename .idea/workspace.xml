@@ -5,28 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="877c45dc-e86e-43a5-8cd8-d2ab6a9ffdc1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/ConfigFileDb.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/LoadAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/Persistence.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMongoDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterPostgreSQL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/IPersistenceAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/AdapterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MongoAdapterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/PostgreAdapterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/RegisterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMongoDB.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionPostgreSQL.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/undabits/persistence/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMysql.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MysqlAdapterFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMysql.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/RegisterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/RegisterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/config.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

@@ -15,6 +15,7 @@ public class RegisterFactory {
     private void register(){
         this.factories.put("MONGO", new MongoAdapterFactory());
         this.factories.put("POSTGRE", new PostgreAdapterFactory());
+        this.factories.put("MYSQL", new MysqlAdapterFactory());
     }
 
 
