@@ -1,16 +1,22 @@
 package com.undabits.persistence.adapters;
 
+import com.undabits.persistence.engines.ConnectionMysql;
 import java.util.Iterator;
 import java.util.Map;
 
 public class AdapterMysql implements IPersistenceAdapter{
 
+    private ConnectionMysql mysql;
+
     public AdapterMysql(String host, Integer port, String database, String user, String password) {
+        this.mysql = new ConnectionMysql(host,port,database,user,password);
+
     }
 
     @Override
     public Boolean insert(String table, Map<String, Object> data) {
         return null;
+
     }
 
     @Override

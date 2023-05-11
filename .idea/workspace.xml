@@ -5,13 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="877c45dc-e86e-43a5-8cd8-d2ab6a9ffdc1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMysql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MysqlAdapterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMysql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/RegisterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/RegisterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMysql.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMysql.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
