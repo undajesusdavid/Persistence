@@ -1,6 +1,6 @@
 package com.undabits.persistence.adapters.factory;
 
-import com.undabits.persistence.adapters.AdapterPostgreSQL;
+import com.undabits.persistence.adapters.PostgresqlAdapter;
 import com.undabits.persistence.ConfigFileDb;
 import com.undabits.persistence.adapters.IPersistenceAdapter;
 
@@ -12,7 +12,7 @@ public class PostgreAdapterFactory extends AdapterFactory {
         String db     = file.get("POSTGRE_DB");
         String user   = file.get("POSTGRE_USER");
         String pass   = file.get("POSTGRE_PASSWORD");
-        IPersistenceAdapter adapterPostgre = new AdapterPostgreSQL(host,port,db,user,pass);
+        IPersistenceAdapter adapterPostgre = new PostgresqlAdapter(host,port,db,user,pass);
         return adapterPostgre;
     }
 }

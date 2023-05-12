@@ -5,11 +5,11 @@ import org.bson.Document;
 import java.util.Iterator;
 import java.util.Map;
 
-public class AdapterPostgreSQL implements IPersistenceAdapter {
+public class PostgresqlAdapter implements IPersistenceAdapter {
 
     private ConnectionPostgreSQL postgre;
 
-    public AdapterPostgreSQL(String host, Integer port , String database,String user, String password){
+    public PostgresqlAdapter(String host, Integer port , String database, String user, String password){
         this.postgre = new ConnectionPostgreSQL(host,port,database,user,password);
     }
 

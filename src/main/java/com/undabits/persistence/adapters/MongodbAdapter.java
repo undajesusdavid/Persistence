@@ -15,11 +15,11 @@ import java.util.List;
 import java.util.Map;
 
 
-public class AdapterMongoDB implements IPersistenceAdapter {
+public class MongodbAdapter implements IPersistenceAdapter {
 
     private ConnectionMongoDB mongo;
 
-    public  AdapterMongoDB(String host, Integer port, String database, String user, String password){
+    public MongodbAdapter(String host, Integer port, String database, String user, String password){
         this.mongo = new ConnectionMongoDB(host,port,database,user,password);
     }
 

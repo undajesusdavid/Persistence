@@ -1,6 +1,6 @@
 package com.undabits.persistence.adapters.factory;
 
-import com.undabits.persistence.adapters.AdapterMongoDB;
+import com.undabits.persistence.adapters.MongodbAdapter;
 import com.undabits.persistence.ConfigFileDb;
 import com.undabits.persistence.adapters.IPersistenceAdapter;
 
@@ -13,7 +13,7 @@ public class MongoAdapterFactory extends AdapterFactory{
         String db = file.get("MONGO_DB");
         String user = file.get("MONGO_USER");
         String pass = file.get("MONGO_PASSWORD");
-        IPersistenceAdapter adapterMongo = new AdapterMongoDB(host,port,db,user,pass);
+        IPersistenceAdapter adapterMongo = new MongodbAdapter(host,port,db,user,pass);
         return adapterMongo;
     }
 }

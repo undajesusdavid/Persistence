@@ -5,10 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="877c45dc-e86e-43a5-8cd8-d2ab6a9ffdc1" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/query_strategies/LoadQueryStrategy.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/query_strategies/Query.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/query_strategies/QueryResult.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/query_strategies/mysql/MysqlInsert.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMysql.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/config.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/config.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMongoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/MongodbAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/MysqlAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/AdapterPostgreSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/PostgresqlAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MongoAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MongoAdapterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MysqlAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MysqlAdapterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/PostgreAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/PostgreAdapterFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMysql.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMysql.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -19,6 +27,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
