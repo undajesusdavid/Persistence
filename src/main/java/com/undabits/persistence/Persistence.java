@@ -1,11 +1,12 @@
 package com.undabits.persistence;
 
-import com.undabits.persistence.adapters.IPersistenceAdapter;
-import java.util.Iterator;
+import com.undabits.persistence.adapters.IAdapter;
+import com.undabits.persistence.result_structuring.QueryResult;
+
 import java.util.Map;
 
 public class Persistence {
-    private IPersistenceAdapter dbAdapter;
+    private IAdapter dbAdapter;
     private String table;
 
     public Persistence(String table){
@@ -14,11 +15,11 @@ public class Persistence {
         this.table = table;
     }
 
-    public Boolean add(Map<String,Object> data){
+    public QueryResult add(Map<String,Object> data){
         return this.dbAdapter.insert(this.table ,data);
     }
 
-    public Iterator get(){
+    public QueryResult get(){
         return this.dbAdapter.getAll(this.table);
     }
 
@@ -26,7 +27,7 @@ public class Persistence {
         return this.dbAdapter.getOne(this.table,id);
     }
 
-    public Boolean update(String id, Map<String, Object> data){
+    public QueryResult update(String id, Map<String, Object> data){
         return this.dbAdapter.update(this.table,id,data);
     }
 

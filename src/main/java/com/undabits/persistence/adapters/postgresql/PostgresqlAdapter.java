@@ -1,11 +1,13 @@
-package com.undabits.persistence.adapters;
+package com.undabits.persistence.adapters.postgresql;
 
-import com.undabits.persistence.engines.ConnectionPostgreSQL;
+import com.undabits.persistence.adapters.IAdapter;
+import com.undabits.persistence.engines.postgresql.ConnectionPostgreSQL;
+import com.undabits.persistence.result_structuring.QueryResult;
 import org.bson.Document;
 import java.util.Iterator;
 import java.util.Map;
 
-public class PostgresqlAdapter implements IPersistenceAdapter {
+public class PostgresqlAdapter implements IAdapter {
 
     private ConnectionPostgreSQL postgre;
 
@@ -14,13 +16,13 @@ public class PostgresqlAdapter implements IPersistenceAdapter {
     }
 
     @Override
-    public Boolean insert(String table, Map<String,Object> data) {
+    public QueryResult insert(String table, Map<String,Object> data) {
         //this.postgre.statement().executeQuery("INSERT INTO "+table+" () VALUES (valor1, valor2, valor3, .)");
         return null;
     }
 
     @Override
-    public Boolean update(String table, String id, Map<String,Object> data) {
+    public QueryResult update(String table, String id, Map<String,Object> data) {
         return null;
     }
 
@@ -30,7 +32,7 @@ public class PostgresqlAdapter implements IPersistenceAdapter {
     }
 
     @Override
-    public Iterator getAll(String table) {
+    public QueryResult getAll(String table) {
         return null;
     }
 

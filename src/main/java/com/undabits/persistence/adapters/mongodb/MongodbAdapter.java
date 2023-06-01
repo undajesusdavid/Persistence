@@ -1,10 +1,12 @@
-package com.undabits.persistence.adapters;
+package com.undabits.persistence.adapters.mongodb;
 
 import com.mongodb.client.model.Filters;
 import com.mongodb.client.model.Updates;
-import com.undabits.persistence.engines.ConnectionMongoDB;
+import com.undabits.persistence.adapters.IAdapter;
+import com.undabits.persistence.engines.mongodb.ConnectionMongoDB;
 import static com.mongodb.client.model.Filters.eq;
 import com.mongodb.client.MongoCollection;
+import com.undabits.persistence.result_structuring.QueryResult;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 import org.bson.Document;
@@ -15,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 
-public class MongodbAdapter implements IPersistenceAdapter {
+public class MongodbAdapter implements IAdapter {
 
     private ConnectionMongoDB mongo;
 
@@ -41,19 +43,21 @@ public class MongodbAdapter implements IPersistenceAdapter {
 
 
     @Override
-    public Boolean insert(String table, Map<String,Object> data) {
-        try {
+    public QueryResult insert(String table, Map<String,Object> data) {
+        /*try {
             this.mongo.collection(table).insertOne(new Document(data));
             return true;
         }catch(Exception e) {
             System.out.println(e.getMessage());
             return false;
-        }
+        }*/
+
+        return null;
     }
 
     @Override
-    public Boolean update(String table, String id, Map<String,Object> data) {
-        MongoCollection collection = this.mongo.collection(table);
+    public QueryResult update(String table, String id, Map<String,Object> data) {
+        /*MongoCollection collection = this.mongo.collection(table);
         Bson filter = Filters.eq("_id", new ObjectId(id));
         Bson updates = this.toUpdateSetDocument(data);
         try{
@@ -62,7 +66,9 @@ public class MongodbAdapter implements IPersistenceAdapter {
         }catch (Exception e) {
             System.out.println(e.getMessage());
             return false;
-        }
+        }*/
+
+        return null;
     }
 
     @Override
@@ -80,9 +86,10 @@ public class MongodbAdapter implements IPersistenceAdapter {
     }
 
     @Override
-    public Iterator getAll(String table) {
-        MongoCollection collection = this.mongo.collection(table);
-        return collection.find().iterator();
+    public QueryResult getAll(String table) {
+        /*MongoCollection collection = this.mongo.collection(table);
+        return collection.find().iterator();*/
+        return null;
     }
 
     @Override

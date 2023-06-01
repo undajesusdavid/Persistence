@@ -1,4 +1,4 @@
-package com.undabits.persistence.engines;
+package com.undabits.persistence.engines.postgresql;
 
 
 import java.sql.*;

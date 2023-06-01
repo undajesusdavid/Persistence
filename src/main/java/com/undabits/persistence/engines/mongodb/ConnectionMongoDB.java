@@ -1,4 +1,4 @@
-package com.undabits.persistence.engines;
+package com.undabits.persistence.engines.mongodb;
 
 import com.mongodb.MongoQueryException;
 import org.bson.Document;

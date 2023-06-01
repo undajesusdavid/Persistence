@@ -1,10 +1,8 @@
 package com.undabits.persistence;
 
-import com.undabits.persistence.adapters.IPersistenceAdapter;
-import com.undabits.persistence.adapters.factory.AdapterFactory;
-import com.undabits.persistence.adapters.factory.RegisterFactory;
-
-import java.util.HashMap;
+import com.undabits.persistence.adapters.IAdapter;
+import com.undabits.persistence.adapters_factory.AdapterFactory;
+import com.undabits.persistence.adapters_factory.RegisterFactory;
 
 public class LoadAdapter {
     private ConfigFileDb config;
@@ -14,9 +12,9 @@ public class LoadAdapter {
         this.factories = new RegisterFactory();
     }
 
-    public IPersistenceAdapter load(){
+    public IAdapter load(){
         AdapterFactory factory = this.factories.get(this.config.getCurrentAdapter());
-        IPersistenceAdapter adapter = factory.getAdapter(this.config);
+        IAdapter adapter = factory.getAdapter(this.config);
         return adapter;
     }
 

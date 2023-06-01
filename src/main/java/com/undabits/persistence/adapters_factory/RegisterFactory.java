@@ -1,4 +1,4 @@
-package com.undabits.persistence.adapters.factory;
+package com.undabits.persistence.adapters_factory;
 
 import java.util.HashMap;
 public class RegisterFactory {
