@@ -52,8 +52,10 @@ public class QueryResult {
         return messageSuccess;
     }
 
-    public List<JSONObject> getData() {
-
+    public List<JSONObject> getDataList() {
         return   this.data;
+    }
+    public JSONObject getDataFirst() {
+        return   this.data.get(0);
     }
 }

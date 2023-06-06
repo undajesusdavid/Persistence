@@ -2,6 +2,8 @@ package com.undabits.persistence.engines.mongodb;
 
 import com.mongodb.MongoQueryException;
 import org.bson.Document;
+
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import com.mongodb.ConnectionString;
@@ -11,36 +13,42 @@ import com.mongodb.client.MongoCollection;
 
 public class ConnectionMongoDB {
     private String uri;
+    private String database;
     private MongoDatabase connection;
 
-    public  ConnectionMongoDB(String host, Integer port, String dataBase, String user, String password){
-        Logger.getLogger("org.mongodb").setLevel(Level.OFF);
+    public ConnectionMongoDB(Map<String,String> params){
+        this.uri = buildUri(params);
+        this.database = params.get("database");
+    }
 
-        if(!user.isEmpty() || !password.isEmpty()){
-            this.uri = "mongodb://"+user+":"+password+"@"+host+":"+port+"/";
-        }else{
-            this.uri = "mongodb://"+host+":"+port+"/";
-        }
+    private MongoDatabase connect() throws  MongoQueryException{
 
         try{
-            this.connection = this.connect(dataBase);
+            ConnectionString connectionString = new ConnectionString(this.uri);
+            MongoDatabase db = MongoClients.create(connectionString).getDatabase(this.database);
+            this.connection = db;
         }catch (Exception e){
-            this.connection = null;
             System.out.println("No se pudo conectar con mongoDB");
             System.out.println("Error: "+e.getMessage());
         }
 
-    }
-
-    private MongoDatabase connect(String dataBase) throws  MongoQueryException{
-        ConnectionString connectionString = new ConnectionString(this.uri);
-        MongoDatabase db = MongoClients.create(connectionString).getDatabase(dataBase);
-        return db;
+        return this.connection;
     }
 
     public MongoCollection collection(String table){
-        MongoCollection<Document> collection = this.connection.getCollection(table);
+        MongoCollection<Document> collection = this.connect().getCollection(table);
         return collection;
+    }
+
+    private String buildUri(Map<String,String> params){
+        StringBuilder uri = new StringBuilder("mongodb://");
+        String user = params.get("user");
+        String password = params.get("password");
+        if(!user.isEmpty() || !params.get("password").isEmpty()){
+            uri.append(user).append(":").append(password).append("@");
+        }
+        uri.append(params.get("host")).append(":").append(params.get("port")).append("/");
+        return uri.toString();
     }
 }
 

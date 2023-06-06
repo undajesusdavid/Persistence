@@ -5,6 +5,7 @@ import com.undabits.persistence.engines.postgresql.ConnectionPostgreSQL;
 import com.undabits.persistence.result_structuring.QueryResult;
 import org.bson.Document;
 import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
 
 public class PostgresqlAdapter implements IAdapter {
@@ -22,12 +23,17 @@ public class PostgresqlAdapter implements IAdapter {
     }
 
     @Override
+    public QueryResult multipleInsert(String table, List<Map<String,Object>> listData) {
+        return null;
+    }
+
+    @Override
     public QueryResult update(String table, String id, Map<String,Object> data) {
         return null;
     }
 
     @Override
-    public Boolean delete(String table, String id) {
+    public QueryResult delete(String table, String id) {
         return null;
     }
 
@@ -37,12 +43,8 @@ public class PostgresqlAdapter implements IAdapter {
     }
 
     @Override
-    public Document getOne(String table, String id) {
+    public QueryResult getOne(String table, String id) {
         return null;
     }
 
-    @Override
-    public Iterator getWhere(String table, String val1, String condition, String val2) {
-        return null;
-    }
 }

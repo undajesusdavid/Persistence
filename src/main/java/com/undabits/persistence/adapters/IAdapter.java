@@ -11,15 +11,15 @@ public interface IAdapter {
 
     public QueryResult insert(String table, Map<String,Object> data);
 
+    public  QueryResult multipleInsert(String table, List<Map<String,Object>> dataList);
+
     public  QueryResult update(String table,String id, Map<String,Object> data);
 
-    public  Boolean delete(String table, String id);
+    public  QueryResult delete(String table, String id);
 
     public QueryResult getAll(String table);
 
-    public Map<String,Object> getOne(String table, String id);
-
-    public Iterator getWhere(String table, String val1,String condition, String val2);
+    public QueryResult getOne(String table, String id);
 
 
 }

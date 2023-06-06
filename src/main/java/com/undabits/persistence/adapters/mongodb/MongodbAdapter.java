@@ -21,8 +21,8 @@ public class MongodbAdapter implements IAdapter {
 
     private ConnectionMongoDB mongo;
 
-    public MongodbAdapter(String host, Integer port, String database, String user, String password){
-        this.mongo = new ConnectionMongoDB(host,port,database,user,password);
+    public MongodbAdapter(Map<String,String> params){
+        this.mongo = new ConnectionMongoDB(params);
     }
 
 
@@ -72,8 +72,8 @@ public class MongodbAdapter implements IAdapter {
     }
 
     @Override
-    public Boolean delete(String table, String id) {
-        MongoCollection collection = this.mongo.collection(table);
+    public QueryResult delete(String table, String id) {
+        /*MongoCollection collection = this.mongo.collection(table);
         Bson filter = Filters.eq("_id", new ObjectId(id));
 
         try{
@@ -82,7 +82,8 @@ public class MongodbAdapter implements IAdapter {
         }catch (Exception e) {
             System.out.println(e.getMessage());
             return false;
-        }
+        }*/
+        return  null;
     }
 
     @Override
@@ -93,15 +94,16 @@ public class MongodbAdapter implements IAdapter {
     }
 
     @Override
-    public Map<String, Object> getOne(String table, String id) {
-        MongoCollection collection = this.mongo.collection(table);
+    public QueryResult getOne(String table, String id) {
+        /*MongoCollection collection = this.mongo.collection(table);
         Document find = (Document) collection.find(eq("_id",new ObjectId(id))).first();
-        return find;
+        return find;*/
+        return null;
 
     }
 
     @Override
-    public Iterator getWhere(String table, String val1, String condition, String val2) {
+    public QueryResult multipleInsert(String table, List<Map<String,Object>> listData) {
         return null;
     }
 }

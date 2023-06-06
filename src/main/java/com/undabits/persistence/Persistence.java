@@ -3,6 +3,8 @@ package com.undabits.persistence;
 import com.undabits.persistence.adapters.IAdapter;
 import com.undabits.persistence.result_structuring.QueryResult;
 
+import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Persistence {
@@ -18,12 +20,15 @@ public class Persistence {
     public QueryResult add(Map<String,Object> data){
         return this.dbAdapter.insert(this.table ,data);
     }
+    public QueryResult add(List<Map<String,Object>> listData){
+        return this.dbAdapter.multipleInsert(this.table ,listData);
+    }
 
     public QueryResult get(){
         return this.dbAdapter.getAll(this.table);
     }
 
-    public Map<String,Object> get(String id){
+    public QueryResult get(String id){
         return this.dbAdapter.getOne(this.table,id);
     }
 
@@ -31,7 +36,7 @@ public class Persistence {
         return this.dbAdapter.update(this.table,id,data);
     }
 
-    public Boolean remove(String id){
+    public QueryResult remove(String id){
         return this.dbAdapter.delete(this.table,id);
     }
 

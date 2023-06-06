@@ -45,4 +45,15 @@ public class QueryProcessing extends ConnectionMysql {
     }
 
 
+    public QueryResult delete(String query){
+        List<JSONObject> dataList = this.executeQuery(query, (ps) -> {
+            ps.executeUpdate();
+            return null;
+        });
+
+        QueryResult result = new QueryResult(dataList);
+        result.setStatus(true);
+        return result;
+    }
+
 }

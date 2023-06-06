@@ -1,26 +1,31 @@
 package com.undabits.persistence.adapters.mysql;
+
 import com.undabits.persistence.adapters.IAdapter;
+import com.undabits.persistence.engines.mysql.builders.DeleteBuilder;
 import com.undabits.persistence.engines.mysql.builders.InsertBuilder;
 import com.undabits.persistence.engines.mysql.builders.SelectBuilder;
 import com.undabits.persistence.engines.mysql.QueryProcessing;
 import com.undabits.persistence.engines.mysql.builders.UpdateBuilder;
 import com.undabits.persistence.result_structuring.QueryResult;
-
 import java.util.HashMap;
-import java.util.Iterator;
+import java.util.List;
 import java.util.Map;
-
 public class MysqlAdapter implements IAdapter {
-
     private QueryProcessing mysql;
     public MysqlAdapter(Map<String,String> params) {
         this.mysql = new QueryProcessing(params);
     }
-
-
     @Override
     public QueryResult insert(String table, Map<String, Object> data) {
         InsertBuilder queryBuilder = new InsertBuilder(table,data);
+        String query = queryBuilder.getQueryString();
+        QueryResult result = this.mysql.insert(query);
+        return  result;
+    }
+
+    @Override
+    public QueryResult multipleInsert(String table, List<Map<String,Object>> dataList) {
+        InsertBuilder queryBuilder = new InsertBuilder(table,dataList);
         String query = queryBuilder.getQueryString();
         QueryResult result = this.mysql.insert(query);
         return  result;
@@ -33,7 +38,6 @@ public class MysqlAdapter implements IAdapter {
         QueryResult result = this.mysql.select(query);
         return result;
     }
-
     @Override
     public QueryResult update(String table, String id, Map<String, Object> data) {
         Map<String,Object> conditions = new HashMap<>();
@@ -44,20 +48,24 @@ public class MysqlAdapter implements IAdapter {
         QueryResult result = this.mysql.update(query);
         return result;
     }
-
     @Override
-    public Boolean delete(String table, String id) {
-        return null;
+    public QueryResult delete(String table, String id) {
+        Map<String,Object> conditions = new HashMap<>();
+        conditions.put("id",id);
+        DeleteBuilder queryBuilder = new DeleteBuilder(table,conditions);
+        String query = queryBuilder.getQueryString();
+        QueryResult result = this.mysql.delete(query);
+        return result;
+    }
+    @Override
+    public QueryResult getOne(String table, String id) {
+        SelectBuilder queryBuilder = new SelectBuilder(table);
+        HashMap<String,Object> conditions = new HashMap<>();
+        conditions.put("id",id);
+        queryBuilder.where(conditions);
+        String query = queryBuilder.getQueryString();
+        QueryResult result = this.mysql.select(query);
+        return result;
     }
 
-
-    @Override
-    public Map<String, Object> getOne(String table, String id) {
-        return null;
-    }
-
-    @Override
-    public Iterator getWhere(String table, String val1, String condition, String val2) {
-        return null;
-    }
 }

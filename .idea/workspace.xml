@@ -5,40 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="877c45dc-e86e-43a5-8cd8-d2ab6a9ffdc1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/mysql/MysqlAdapter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/AdapterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/MysqlAdapterFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/ConnectionMysql.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/MysqlOperation.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/QueryProcessing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/InsertBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/QueryBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/SelectBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/UpdateBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/result_structuring/QueryResult.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/result_structuring/converters/Convert.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/result_structuring/converters/ResultsetToList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/DeleteBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/LoadAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/LoadAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/Persistence.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/Persistence.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/IPersistenceAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/IAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/MongodbAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/mongodb/MongodbAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/MysqlAdapter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/PostgresqlAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/postgresql/PostgresqlAdapter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/AdapterFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MongoAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/MongoAdapterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/MysqlAdapterFactory.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/PostgreAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/PostgreAdapterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/factory/RegisterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/RegisterFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/query_strategies/LoadQueryStrategy.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/query_strategies/Query.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/query_strategies/QueryResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/query_strategies/mysql/MysqlInsert.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMongoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mongodb/ConnectionMongoDB.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionMysql.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/ConnectionPostgreSQL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/postgresql/ConnectionPostgreSQL.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/IAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/IAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/mongodb/MongodbAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/mongodb/MongodbAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/mysql/MysqlAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/mysql/MysqlAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/postgresql/PostgresqlAdapter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters/postgresql/PostgresqlAdapter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/MongoAdapterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/MongoAdapterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/RegisterFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/adapters_factory/RegisterFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mongodb/ConnectionMongoDB.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mongodb/ConnectionMongoDB.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/QueryProcessing.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/QueryProcessing.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/InsertBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/InsertBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/QueryBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/QueryBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/UpdateBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/engines/mysql/builders/UpdateBuilder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/result_structuring/QueryResult.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/undabits/persistence/result_structuring/QueryResult.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,6 +99,11 @@
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="aeeddf0c-8828-4880-93a8-d5f4a321aac6" value="TOOL_WINDOW" />
+      </map>
+    </option>
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
@@ -133,6 +121,11 @@
                 </map>
               </option>
             </State>
+          </value>
+        </entry>
+        <entry key="aeeddf0c-8828-4880-93a8-d5f4a321aac6">
+          <value>
+            <State />
           </value>
         </entry>
       </map>

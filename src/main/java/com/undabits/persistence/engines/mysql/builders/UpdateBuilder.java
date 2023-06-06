@@ -1,6 +1,5 @@
 package com.undabits.persistence.engines.mysql.builders;
 
-import java.util.Iterator;
 import java.util.Map;
 
 public class UpdateBuilder extends QueryBuilder {
@@ -21,22 +20,9 @@ public class UpdateBuilder extends QueryBuilder {
 
     @Override
     public String getQueryString() {
-
-        String[] dataUpdate = new String[this.data.size()];
-        Iterator keys = this.data.keySet().iterator();
-        int counter = 0;
-        while (keys.hasNext()){
-            String key = keys.next().toString();
-            String value = this.data.get(key).toString();
-            StringBuilder sets = new StringBuilder(key).append("='").append(value).append("'");
-            dataUpdate[counter] =  sets.toString();
-            counter++;
-        }
-
         StringBuilder queryString = new StringBuilder("UPDATE ").append(this.table).append(" SET ");
-        queryString.append(String.join(",",dataUpdate));
+        queryString.append(this.buildSet("=",this.data));
         queryString.append(" WHERE ").append(this.buildWhere("=",this.equalCondition));
-
         return queryString.toString();
     }
 }
