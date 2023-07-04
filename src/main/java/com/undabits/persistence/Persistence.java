@@ -3,7 +3,6 @@ package com.undabits.persistence;
 import com.undabits.persistence.adapters.IAdapter;
 import com.undabits.persistence.result_structuring.QueryResult;
 
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 

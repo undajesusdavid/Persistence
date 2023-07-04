@@ -4,7 +4,6 @@ import java.util.HashMap;
 public class RegisterFactory {
     private HashMap<String, Class> factories;
 
-
     public  RegisterFactory(){
         try{
             this.register();
@@ -13,7 +12,6 @@ public class RegisterFactory {
             System.out.println("Verifique que las rutas de las clases sean la correcta");
             System.out.println(ex.getMessage());
         }
-
     }
 
     public AdapterFactory get(String engineName) throws InstantiationException, IllegalAccessException {
@@ -26,8 +24,6 @@ public class RegisterFactory {
         this.factories.put("MONGO",Class.forName("com.undabits.persistence.adapters_factory.MongoAdapterFactory"));
         this.factories.put("POSTGRE", Class.forName("com.undabits.persistence.adapters_factory.PostgreAdapterFactory"));
         this.factories.put("MYSQL", Class.forName("com.undabits.persistence.adapters_factory.MysqlAdapterFactory"));
-
-
     }
 
 

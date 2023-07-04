@@ -59,11 +59,6 @@ public class ConnectionMysql {
         try{
             PreparedStatement ps = con.prepareStatement(query);
             data = operation.executeStatement(ps);
-
-            //ResultSet result = ps.executeQuery();
-            //Convert convert = new ResultsetToList(result);
-            //data = convert.convertData();
-
         }catch (SQLException e){
             System.out.println(e.getMessage());
             e.printStackTrace();
