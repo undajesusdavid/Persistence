@@ -7,6 +7,8 @@ import com.undabits.persistence.engines.mysql.builders.SelectBuilder;
 import com.undabits.persistence.engines.mysql.QueryProcessing;
 import com.undabits.persistence.engines.mysql.builders.UpdateBuilder;
 import com.undabits.persistence.result_structuring.QueryResult;
+import org.json.JSONObject;
+
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -16,7 +18,7 @@ public class MysqlAdapter implements IAdapter {
         this.mysql = new QueryProcessing(params);
     }
     @Override
-    public QueryResult insert(String table, Map<String, Object> data) {
+    public QueryResult insert(String table, JSONObject data) {
         InsertBuilder queryBuilder = new InsertBuilder(table,data);
         String query = queryBuilder.getQueryString();
         QueryResult result = this.mysql.insert(query);
@@ -24,7 +26,7 @@ public class MysqlAdapter implements IAdapter {
     }
 
     @Override
-    public QueryResult multipleInsert(String table, List<Map<String,Object>> dataList) {
+    public QueryResult multipleInsert(String table, List<JSONObject> dataList) {
         InsertBuilder queryBuilder = new InsertBuilder(table,dataList);
         String query = queryBuilder.getQueryString();
         QueryResult result = this.mysql.insert(query);

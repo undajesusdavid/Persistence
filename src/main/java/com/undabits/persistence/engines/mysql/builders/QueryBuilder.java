@@ -1,5 +1,8 @@
 package com.undabits.persistence.engines.mysql.builders;
 
+import org.json.JSONObject;
+
+import java.time.LocalDateTime;
 import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
@@ -39,13 +42,17 @@ public abstract class QueryBuilder {
         return dataSet.toString();
     }
 
-    protected String buildFieldsOrValues(Map<String,Object> data, boolean getValue){
+    protected String buildFieldsOrValues(JSONObject data, boolean getValue){
         Iterator keys = data.keySet().iterator();
         StringBuilder fields = new StringBuilder("(");
         while(keys.hasNext()){
             String key = (String) keys.next();
             if(getValue){
-                fields.append("'").append(data.get(key)).append("'");
+                if(data.get(key) instanceof String || data.get(key) instanceof LocalDateTime){
+                    fields.append("'").append(data.get(key)).append("'");
+                }else{
+                    fields.append(data.get(key));
+                }
             }else{
                 fields.append(key);
             }
@@ -58,12 +65,12 @@ public abstract class QueryBuilder {
         return fields.toString();
     }
 
-    protected String buildValueList(List<Map<String,Object>> dataList){
+    protected String buildValueList(List<JSONObject> dataList){
         StringBuilder values = new StringBuilder();
-        ListIterator<Map<String,Object>> it = dataList.listIterator();
+        ListIterator<JSONObject> it = dataList.listIterator();
 
         while (it.hasNext()){
-            Map<String,Object> data = it.next();
+            JSONObject data = it.next();
             values.append(this.buildFieldsOrValues(data,true));
 
             if(it.hasNext()){

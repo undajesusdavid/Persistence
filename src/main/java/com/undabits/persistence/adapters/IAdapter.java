@@ -9,9 +9,9 @@ import java.util.Map;
 
 public interface IAdapter {
 
-    public QueryResult insert(String table, Map<String,Object> data);
+    public QueryResult insert(String table,JSONObject data);
 
-    public  QueryResult multipleInsert(String table, List<Map<String,Object>> dataList);
+    public  QueryResult multipleInsert(String table, List<JSONObject> dataList);
 
     public  QueryResult update(String table,String id, Map<String,Object> data);
 

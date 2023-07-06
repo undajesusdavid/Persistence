@@ -4,6 +4,8 @@ import com.undabits.persistence.adapters.IAdapter;
 import com.undabits.persistence.engines.postgresql.ConnectionPostgreSQL;
 import com.undabits.persistence.result_structuring.QueryResult;
 import org.bson.Document;
+import org.json.JSONObject;
+
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
@@ -17,13 +19,13 @@ public class PostgresqlAdapter implements IAdapter {
     }
 
     @Override
-    public QueryResult insert(String table, Map<String,Object> data) {
+    public QueryResult insert(String table, JSONObject data) {
         //this.postgre.statement().executeQuery("INSERT INTO "+table+" () VALUES (valor1, valor2, valor3, .)");
         return null;
     }
 
     @Override
-    public QueryResult multipleInsert(String table, List<Map<String,Object>> listData) {
+    public QueryResult multipleInsert(String table, List<JSONObject> listData) {
         return null;
     }
 

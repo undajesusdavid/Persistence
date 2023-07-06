@@ -2,6 +2,7 @@ package com.undabits.persistence;
 
 import com.undabits.persistence.adapters.IAdapter;
 import com.undabits.persistence.result_structuring.QueryResult;
+import org.json.JSONObject;
 
 import java.util.List;
 import java.util.Map;
@@ -16,10 +17,10 @@ public class Persistence {
         this.table = table;
     }
 
-    public QueryResult add(Map<String,Object> data){
+    public QueryResult add(JSONObject data){
         return this.dbAdapter.insert(this.table ,data);
     }
-    public QueryResult add(List<Map<String,Object>> listData){
+    public QueryResult add(List<JSONObject> listData){
         return this.dbAdapter.multipleInsert(this.table ,listData);
     }
 

@@ -10,6 +10,7 @@ import com.undabits.persistence.result_structuring.QueryResult;
 import org.bson.conversions.Bson;
 import org.bson.types.ObjectId;
 import org.bson.Document;
+import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -43,7 +44,7 @@ public class MongodbAdapter implements IAdapter {
 
 
     @Override
-    public QueryResult insert(String table, Map<String,Object> data) {
+    public QueryResult insert(String table, JSONObject data) {
         /*try {
             this.mongo.collection(table).insertOne(new Document(data));
             return true;
@@ -52,6 +53,11 @@ public class MongodbAdapter implements IAdapter {
             return false;
         }*/
 
+        return null;
+    }
+
+    @Override
+    public QueryResult multipleInsert(String table, List<JSONObject> listData) {
         return null;
     }
 
@@ -102,8 +108,5 @@ public class MongodbAdapter implements IAdapter {
 
     }
 
-    @Override
-    public QueryResult multipleInsert(String table, List<Map<String,Object>> listData) {
-        return null;
-    }
+
 }

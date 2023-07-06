@@ -1,19 +1,21 @@
 package com.undabits.persistence.engines.mysql.builders;
 
+import org.json.JSONObject;
+
 import java.util.List;
 import java.util.Map;
 
 public class InsertBuilder extends QueryBuilder {
 
-    private Map<String,Object>  data;
-    private List<Map<String,Object>> dataList;
+    private JSONObject  data;
+    private List<JSONObject> dataList;
 
-    public InsertBuilder(String table, Map<String,Object> data) {
+    public InsertBuilder(String table, JSONObject data) {
         super(table);
         this.data = data;
     }
 
-    public InsertBuilder(String table, List<Map<String,Object>> dataList) {
+    public InsertBuilder(String table, List<JSONObject> dataList) {
         super(table);
         this.dataList = dataList;
     }
